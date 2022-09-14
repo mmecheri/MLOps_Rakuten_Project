@@ -38,7 +38,7 @@ Puis de lancer le fichier `setup.sh`: *./setup.sh*
 
 L'API est ensuite disponible à l'adresse *[http://localhost:8000](http://localhost:8000")* 
 
-La documentation est présente au point d'entrée `/docs`.
+La documentation est présente au point d'entrée '/docs'
 
 
 
