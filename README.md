@@ -40,3 +40,11 @@ L'API est ensuite disponible à l'adresse *[http://localhost:8000](http://localh
 
 La documentation est présente au point d'entrée `/docs`.
 
+
+
+**Réalisé par:** 
+* Mourad MECHERI
+
+**Supervisé par:**
+* Anthony JAILLET
+
