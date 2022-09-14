@@ -1,0 +1,266 @@
+
+**********************************************************************************************
+                                     Authentication tests - 2022_09_12-05:23:28_PM
+                                                   START 
+**********************************************************************************************
+
+==================================
+    Authentication test #1 results
+==================================
+
+request done at "/token"
+| username: 'admin_account1@example.com'
+| password: 'adminsecret1'
+
+expected result = 200
+actual restult = 200
+
+==>  SUCCESS
+
+
+==================================
+    Authentication test #2 results
+==================================
+
+request done at "/token"
+| username='alicewonderson@example.com'
+| password='secret1'
+
+expected result = 200
+actual restult = 200
+
+==>  SUCCESS
+
+
+==================================
+    Authentication test #3 results
+==================================
+
+request done at "/token"
+| username="johndoe@example.com"
+| password="password"
+
+expected result = 401
+actual restult = 401
+
+==>  SUCCESS
+
+
+**********************************************************************************************
+                                     Authentication tests 
+                                               END
+**********************************************************************************************
+
+
+
+**********************************************************************************************
+**********************************************************************************************
+                                     Authorization tests - 2022_09_12-05:23:37_PM
+                                                   START 
+**********************************************************************************************
+
+===========================================================================
+    Authorization test #1 - user deletion test with Admin account- results
+===========================================================================
+
+request done at "/Admin"
+| username: 'admin_account1@example.com'
+| password: 'adminsecret1'
+| user deletion test : email: 'clementinemandarine@example.com'
+
+
+expected result = 204
+actual restult = 204
+
+==>  SUCCESS
+
+
+===========================================================================
+    Authorization test #2 - user deletion test with user account- results
+===========================================================================
+request done at "/Admin"
+| username: 'alicewonderson@example.com'
+| password: 'secret1'
+| user deletion test : email: 'johndoe@example.com'
+
+
+expected result = 403
+actual restult = 403
+
+==>  SUCCESS
+
+
+**********************************************************************************************
+                                     Authorization tests 
+                                               END
+**********************************************************************************************
+
+**********************************************************************************************
+                                     Models tests - 2022_09_12-05:23:56_PM
+                                                   START 
+**********************************************************************************************
+
+====================================================================
+    Predictions test #1 using Conv1D TEXT BASED MODEL - results
+====================================================================
+
+request done at "predict_with_text_Conv1D"
+
+| username="johndoe@example.com"
+| password="secret2"
+| designation= "Figurine Minnie Robe Jaune Et Chaussure Rose"                
+| description = "quelques petit éclats de peinture sur gant nez et oreille blanc"  
+
+
+expected result code = 200
+expected Predicted class result =  1280
+expected Predicted label result = "toys for children"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 1280
+actual Predicted label result = "toys for children"
+actual Precision  = 60.15%
+
+==> Code result = SUCCESS
+==> Prediction result = SUCCESS
+
+
+====================================================================
+    Predictions test #2 using Simple DNN TEXT BASED MODEL - results
+====================================================================
+
+request done at "predict_with_text_SimpleDN"
+
+| username="johndoe@example.com"
+| password="secret2"
+| designation= "Revue Fémina 2004 Couverture Sharon Stone"                
+| description = "None"  
+
+
+expected result code = 200
+expected Predicted class result =  2403
+expected Predicted label result = "children books and magazines"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 2280
+actual Predicted label result = "magazines"
+actual Precision  = 77.07%
+
+==> Code result = SUCCESS
+==> Prediction result = FAILURE
+
+
+====================================================================
+    Predictions test #3 using Xception IMAGE BASED MODEL - results
+====================================================================
+
+request done at "predict_with_image_Xception"
+
+| username="johndoe@example.com"
+| password="secret2"
+| image name= "./image_samples/image_1164498572_product_2786150067.jpg"                
+  
+
+
+expected result code = 200
+expected Predicted class result =  2583
+expected Predicted label result ="piscine spa"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 2583
+actual Predicted label result = "piscine spa"
+actual Precision  = 100.0%
+
+==> Code result = SUCCESS
+==> Prediction result = SUCCESS
+
+
+====================================================================
+    Predictions test #4 using Inception IMAGE BASED MODEL - results
+====================================================================
+
+request done at "predict_with_image_Inception"
+
+| username="johndoe@example.com"
+| password="secret2"
+| image name= "./image_samples/image_862500067_product_102168018.jpg"                
+  
+
+
+expected result code = 200
+expected Predicted class result =  1160
+expected Predicted label result ="playing cards"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 2522
+actual Predicted label result = "stationery"
+actual Precision  = 24.02%
+
+==> Code result = SUCCESS
+==> Prediction result = FAILURE
+
+
+=========================================================================================================
+    Predictions test #5 using TEXT and IMAGE - BIMODAL : Conv1D & Simple DNN & Xception Results - results
+=========================================================================================================
+
+request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Xception"
+
+| username="johndoe@example.com"
+| password="secret2"
+| designation= "3-in-1 Manuel Tube Cintreuse application dans le remplacement des lignes de frein Tube de travail tools 1385"                
+| description = "3-in-1 manuel Tube Tube Bender application dans le remplacement des lignes de frein Tube de travail électrique automobile Caractéristiques: cintreuse de tube pour le tube de 90 degrés ou à 180 degrés de flexion conception à trois fentes fonctionne pour 6/8/10 mm tubes et tuyaux poignée ergonomique  correspond à vos mains confortablement et facile à contrôler Convient aux tubes de cuivre des tuyaux en aluminium et les tubes en acier à paroi mince une large application dans le remplacement des lignes de frein travail du tube des champs électriques de l&#39;automobile etc. spécifications: Matériel: alliage d&#39;aluminium angle de flexion maximale: 180 degres de diamètre Bend: 6/8/10 mm poids: 03350 kg taille du produit: 2030 x 590 x 400 cm / 799 x 232 x 157 pouces poids du paquet: 0.3500 kg taille du paquet: 2100 x 700 x 500 cm / 827 x 276 x 197 pouces Contenu de l&#39;emballage: 1 x Tube Bender"
+| image name= "./image_samples/image_1314429107_product_4202302612.jpg"                
+  
+
+
+expected result code = 200
+expected Predicted class result =  2585
+expected Predicted label result ="gardening and DIY"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 2585
+actual Predicted label result = "gardening and DIY"
+actual Precision  = 82.2%
+
+==> Code result = SUCCESS
+==> Prediction result = SUCCESS
+
+
+===================================================================================================
+    Predictions test #6 using TEXT and IMAGE - BIMODAL : Conv1D & Simple DNN & Inception - results 
+===================================================================================================
+
+request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Inception"
+
+| username="johndoe@example.com"
+| password="secret2"
+| designation= "Black Rock Shooter Tv Animation Figurine Figma Dead Master 16 Cm"                
+| description = "None"
+| image name= "./image_samples/image_955830017_product_220445101.jpg"                
+  
+
+
+expected result code = 200
+expected Predicted class result =  1140
+expected Predicted label result ="figurines and Toy Pop"
+expected Precision  = 100
+
+actual result code = 200
+actual Predicted class result = 1140
+actual Predicted label result = "figurines and Toy Pop"
+actual Precision  = 97.04%
+
+==> Code result = SUCCESS
+==> Prediction result = SUCCESS
+
+
+**********************************************************************************************
+                                           Models tests 
+                                               END
+**********************************************************************************************
