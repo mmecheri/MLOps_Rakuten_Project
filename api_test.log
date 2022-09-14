@@ -1,6 +1,6 @@
 
 **********************************************************************************************
-                                     Authentication tests - 2022_09_12-05:23:28_PM
+                                     Authentication tests - 2022_09_14-04:23:31_PM
                                                    START 
 **********************************************************************************************
 
@@ -55,7 +55,7 @@ actual restult = 401
 
 **********************************************************************************************
 **********************************************************************************************
-                                     Authorization tests - 2022_09_12-05:23:37_PM
+                                     Authorization tests - 2022_09_14-04:23:40_PM
                                                    START 
 **********************************************************************************************
 
@@ -63,7 +63,7 @@ actual restult = 401
     Authorization test #1 - user deletion test with Admin account- results
 ===========================================================================
 
-request done at "/Admin"
+request done at "/Admin/delete_user/"
 | username: 'admin_account1@example.com'
 | password: 'adminsecret1'
 | user deletion test : email: 'clementinemandarine@example.com'
@@ -78,7 +78,7 @@ actual restult = 204
 ===========================================================================
     Authorization test #2 - user deletion test with user account- results
 ===========================================================================
-request done at "/Admin"
+request done at "/Admin/delete_user/"
 | username: 'alicewonderson@example.com'
 | password: 'secret1'
 | user deletion test : email: 'johndoe@example.com'
@@ -96,7 +96,7 @@ actual restult = 403
 **********************************************************************************************
 
 **********************************************************************************************
-                                     Models tests - 2022_09_12-05:23:56_PM
+                                     Models tests - 2022_09_14-04:23:59_PM
                                                    START 
 **********************************************************************************************
 
