@@ -79,8 +79,8 @@ request done at "predict_with_text_Conv1D"
 
 | username="johndoe@example.com"
 | password="secret2"
-| designation= "{designation_text_1}"                
-| description = "{description_text_1}"  
+| designation="{designation_text_1}"                
+| description="{description_text_1}"  
 
 
 expected result code = {status_code}
@@ -181,8 +181,8 @@ request done at "predict_with_text_SimpleDN"
 
 | username="johndoe@example.com"
 | password="secret2"
-| designation= "{designation_text_2}"                
-| description = "{description_text_2}"  
+| designation="{designation_text_2}"                
+| description="{description_text_2}"  
 
 
 expected result code = {status_code}
@@ -499,9 +499,9 @@ request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Xception"
 
 | username="johndoe@example.com"
 | password="secret2"
-| designation= "{designation_text_3}"                
-| description = "{description_text_3}"
-| image name= "{image_name_3}"                
+| designation="{designation_text_3}"                
+| description="{description_text_3}"
+| image name="{image_name_3}"                
   
 
 
@@ -610,9 +610,9 @@ request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Inception"
 
 | username="johndoe@example.com"
 | password="secret2"
-| designation= "{designation_text_4}"                
-| description = "{description_text_4}"
-| image name= "{image_name_4}"                
+| designation="{designation_text_4}"                
+| description="{description_text_4}"
+| image name="{image_name_4}"                
   
 
 
