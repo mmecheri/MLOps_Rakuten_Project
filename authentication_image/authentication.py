@@ -6,7 +6,7 @@ import time
 
 #wait for the api to be launched
 print('\n \n Wait until API is finished starting...')
-time.sleep(10)
+time.sleep(101)
 print('\n \n starting completed')
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
