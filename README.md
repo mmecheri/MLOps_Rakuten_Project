@@ -37,7 +37,7 @@ Pour utiliser ce repo, il suffit de le cloner:
 
 *cd Append_Engineer_Project*
 
-Puis de lancer le fichier `setup.sh`: 
+Puis de lancer le fichier `setup.sh`: </br>
  *chmod +x setup.sh* </br>
  *./setup.sh* </br>
 
