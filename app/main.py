@@ -131,7 +131,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
 
 # ============================================================================================================================================
-  #                           NLP , Computer Vision prediction Routes                     
+  #                          API Endpoints                     
   #-----------------------------------------------------------------------------------------------
 
 app.include_router(adminRouter,tags=['Admin']) # Admin Routes
