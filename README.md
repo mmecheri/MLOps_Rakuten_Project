@@ -43,9 +43,7 @@ Pour utiliser ce repo, il suffit de le cloner:
 *git clone https://github.com/mmecheri/Append_Engineer_Project.git*
 
 *cd Append_Engineer_Project* </br>
-Ensuite :</br>
-*chmod +x setup.sh*  </br> 
-*./setup.sh* </br>
+Puis de lancer le fichier `setup.sh`: *./setup.sh* </br> 
 
 L'API est ensuite disponible à l'adresse http://localhost:8000
 
