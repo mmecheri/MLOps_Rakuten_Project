@@ -17,7 +17,6 @@ api_address = 'fastApi_rakuten'
 api_port = 8000
 
 
-
 headers = {
         'accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -247,7 +246,6 @@ else :
      print("An error occurred when tring to save LOGs!")
 # requête #2 END =========================================================================================
 
-
 headers = {}
  
 # Add the token to subsequent requests
@@ -262,8 +260,6 @@ real_label_3 = 'piscine spa'
 #image_name_1 = './image_samples/image_862500067_product_102168018.jpg'
 #real_class_3 = 1160
 #real_label_3 = 'playing cards'
-
-
 
 image_file = [('file', (image_name_1, open(image_name_1, 'rb'),
             'image/jpeg'))]
@@ -353,7 +349,6 @@ else :
 image_name_2 = './image_samples/image_862500067_product_102168018.jpg'
 real_class_4 = 1160
 real_label_4 = 'playing cards'
-
 
 
 image_file = [('file', (image_name_2, open(image_name_2, 'rb'),
@@ -465,13 +460,11 @@ real_class_5 = 2585
 real_label_5 = 'gardening and DIY'
 
 
-
 data_text_3 = {'designation': designation_text_3 ,
               'description': description_text_3 }                          
                            
 image_file = [('image_file', (image_name_3, open(image_name_3, 'rb'),
           'image/jpeg'))]
-
 
 
 time.sleep(1)
@@ -544,7 +537,6 @@ output_5 =  output_5.format(designation_text_3=designation_text_3,
                             precision=precision,
                            prediction_status=prediction_status)
 
-
 print(output_5)
 
 # impression dans un fichier
@@ -568,7 +560,6 @@ real_class_6 = 1140
 real_label_6 = 'figurines and Toy Pop'
 
 
-
 #designation_text_4 = "3-in-1 Manuel Tube Cintreuse application dans le remplacement des lignes de frein Tube de travail tools 1385"
 #description_text_4 =  "3-in-1 manuel Tube Tube Bender application dans le remplacement des lignes de frein Tube de travail électrique automobile Caractéristiques: cintreuse de tube pour le tube de 90 degrés ou à 180 degrés de flexion conception à trois fentes fonctionne pour 6/8/10 mm tubes et tuyaux poignée ergonomique  correspond à vos mains confortablement et facile à contrôler Convient aux tubes de cuivre des tuyaux en aluminium et les tubes en acier à paroi mince une large application dans le remplacement des lignes de frein travail du tube des champs électriques de l&#39;automobile etc. spécifications: Matériel: alliage d&#39;aluminium angle de flexion maximale: 180 degres de diamètre Bend: 6/8/10 mm poids: 03350 kg taille du produit: 2030 x 590 x 400 cm / 799 x 232 x 157 pouces poids du paquet: 0.3500 kg taille du paquet: 2100 x 700 x 500 cm / 827 x 276 x 197 pouces Contenu de l&#39;emballage: 1 x Tube Bender"
 #image_name_4 = './image_samples/image_1314429107_product_4202302612.jpg'
@@ -576,13 +567,11 @@ real_label_6 = 'figurines and Toy Pop'
 #real_label_6 = 'gardening and DIY'
 
 
-
 data_text_4 = {'designation': designation_text_4 ,
               'description': description_text_4 }                          
                            
 image_file = [('image_file', (image_name_4, open(image_name_4, 'rb'),
           'image/jpeg'))]
-
 
 
 time.sleep(1)
