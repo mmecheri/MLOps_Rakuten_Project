@@ -1,7 +1,7 @@
 # Projet Append Engineer - Mourad MECHERI
 ## Déploiement du projet: Rakuten France Multimodal Product Data Classification
-
-
+ 
+ 
 ### Contexte du projet
 
 Ce projet porte sur le dépoilement d’un projet de Machine Learning dans le cadre de ma formation de ML Engineer au sein de l’organisme DataScientest. 
@@ -12,14 +12,18 @@ Dans un contexte de classification des produits « e-commerce » ,  dans la part
 
 A l’issu du projet , nous avons proposé une solution qui permet de réaliser des prédictions avec un modèle basé sur les données Texte ou Images ou les deux combines(Bimodal). 
 Voici les modèles et les combinations que nous avons retenus:
--	Une classification basée sur le Texte: Conv1D et Simple DNN
--	Une classification basée sur les Images: Xception et InceptionV3
+
+-	Une classification basée sur le Texte: 
+     >- Conv1D et Simple DNN
+     
+-	Une classification basée sur les Images: 
+	 >-  Xception et InceptionV3
 -	Une classification Bimodal - Texte et Images:
 
-   - Conv1D, Simple DNN et Xception  
-   - Conv1D, Simple DNN et InceptionV3
+     >- Conv1D, Simple DNN et Xception  
+     >- Conv1D, Simple DNN et InceptionV3
 
-Etape du projet  :
+#### Etape du projet  :
 -	Reprendre les modèle de classification de produits e-commerce Rakuten France et les déployer sur une API :  créer des Endpoints pour réaliser des prédictions
 -	Créer une base de données en Backend pour l’API avec la gestion et l'authentification des utilisateurs 
 -	Conteneuriser avec Docker et Docker-compose
@@ -33,7 +37,7 @@ Pour utiliser ce repo, il suffit de le cloner:
 
 *cd Append_Engineer_Project*
 
-Puis de lancer le fichier `setup.sh`: *./setup.sh*
+Puis de lancer le fichier `setup.sh`: *'./setup.sh*'
 
 
 L'API est ensuite disponible à l'adresse *[http://localhost:8000](http://localhost:8000")* 
@@ -43,8 +47,8 @@ La documentation est présente au point d'entrée '/docs'
 
 
 **Réalisé par:** 
-* Mourad MECHERI
+  Mourad MECHERI
 
 **Supervisé par:**
-* Anthony JAILLET
+  Anthony JAILLET
 
