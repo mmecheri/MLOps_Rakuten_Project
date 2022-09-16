@@ -124,7 +124,7 @@ output_1 =  output_1.format(designation_text_1=designation_text_1,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 print(output_1)
 
@@ -213,7 +213,7 @@ output_2 =  output_2.format(designation_text_2=designation_text_2,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 
 print(output_2)
@@ -308,7 +308,7 @@ output_3 =  output_3.format(image_name_1=image_name_1,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 
 print(output_3)
@@ -397,7 +397,7 @@ output_4 =  output_4.format(image_name_2=image_name_2,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 
 print(output_4)
@@ -500,7 +500,7 @@ output_5 =  output_5.format(designation_text_3=designation_text_3,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 print(output_5)
 
@@ -601,7 +601,7 @@ output_6 =  output_6.format(designation_text_4=designation_text_4,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
                             precision=precision,
-                           prediction_status=prediction_status)
+                            prediction_status=prediction_status)
 
 
 print(output_6)
