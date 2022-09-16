@@ -124,7 +124,6 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-
 app.include_router(adminRouter,tags=['Admin']) # Admin Routes
 app.include_router(usersRouter,tags=['Users']) # Users Routes
 app.include_router(predRouter,tags=['Predictions']) # Predictions Routes
