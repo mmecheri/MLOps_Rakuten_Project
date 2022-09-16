@@ -62,11 +62,8 @@ contact={
 
 module_name =  'app'
 
-  
-                                        
- #                           authenticate                     
- #-----------------------------------------------------------------------------------------------
-
+                                          
+#authenticate                   
 @app.middleware("http")
 async def authenticate(request: Request, call_next):
 
@@ -87,6 +84,7 @@ async def authenticate(request: Request, call_next):
 
     response = await call_next(request)
     return response
+
 
 #-------------------------Default Routes--------------------------------------------------------                     
 #-----------------------------------------------------------------------------------------------
@@ -123,6 +121,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
     return {"access_token": access_token, "token_type": "bearer"}
 #-----------------------------------------------------------------------------------------------
+
 
 
 #-------------------------Include Admin , Users and Models predictions Routes-------------------                     
