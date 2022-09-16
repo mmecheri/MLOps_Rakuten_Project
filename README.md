@@ -5,23 +5,28 @@
 ### Contexte du projet
 
 Ce projet porte sur le dépoilement d’un projet de Machine Learning dans le cadre de ma formation de ML Engineer au sein de l’organisme DataScientest. 
+
 L’objectif étant de déployer en API et de conteneuriser un modèle de prédiction en Machine ou Deep Learning. 
+
 Dans ce projet , je reprends mon projet  fil rouge : Rakuten France Multimodal Product Data Classification réalisé au cours de ma précédente formation de Data Scientist  au sein du même organisme de formation. 
-Contexte et solution retenue lors du projet de formation Data Scientist 
-Dans un contexte de classification des produits « e-commerce » ,  dans la partie modélisation et prédiction, l’objectif était de prédire le code type (prdtypecode) de chaque produit en utilisant des données textuelles (désignation et description du produit) ainsi que des données images (image du produit) tel qu'il est défini dans le catalogue de Rakuten France.
+
+##### Contexte et solution retenue lors du projet de formation Data Scientist 
+
+Dans un contexte de classification des produits « e-commerce », était de prédire le code type (**prdtypecode**) de chaque produit en utilisant des données **textuelles** (désignation et description du produit) ainsi que des données **images** (image du produit) tel qu'il est défini dans le catalogue de Rakuten France.
+
 
 A l’issu du projet , nous avons proposé une solution qui permet de réaliser des prédictions avec un modèle basé sur les données Texte ou Images ou les deux combines(Bimodal). 
 Voici les modèles et les combinations que nous avons retenus:
 
 -	Une classification basée sur le Texte: 
-     >- Conv1D et Simple DNN
+     >- **Conv1D** et **Simple DNN**
      
 -	Une classification basée sur les Images: 
-	 >-  Xception et InceptionV3
+	 >-  **Xception** et **InceptionV3**
 -	Une classification Bimodal - Texte et Images:
 
-     >- Conv1D, Simple DNN et Xception  
-     >- Conv1D, Simple DNN et InceptionV3
+     >- **Conv1D**, **Simple DNN** et **Xception**  
+     >- **Conv1D**, **Simple DNN** et **InceptionV3**
 
 #### Etape du projet  :
 -	Reprendre les modèles de classification de produits e-commerce Rakuten France et les déployer sur une API :  créer des Endpoints pour réaliser des prédictions
