@@ -241,7 +241,7 @@ real_label_3 = 'piscine spa'
 #real_class_3 = 1160
 #real_label_3 = 'playing cards'
 
-image_file = [('file', (image_name_1, open(image_name_1, 'rb'),
+image_file = [('image_file', (image_name_1, open(image_name_1, 'rb'),
             'image/jpeg'))]
 
 
@@ -328,7 +328,7 @@ real_class_4 = 1160
 real_label_4 = 'playing cards'
 
 
-image_file = [('file', (image_name_2, open(image_name_2, 'rb'),
+image_file = [('image_file', (image_name_2, open(image_name_2, 'rb'),
             'image/jpeg'))]
 
 

@@ -100,16 +100,16 @@ async def predict_with_text_SimpleDNN(designation: str = Form(), description: Op
 
 # ============================================================================================================================================
 @predRouter.post("/predict_with_image_Xception",  name= 'Based on Image Only -  Xception', tags=['Predictions'], response_model=ImagePrediction)
-async def predict_with_image_Xception(file: UploadFile = File(...), current_user: predUserModel = Depends(get_current_user)):
+async def predict_with_image_Xception(image_file: UploadFile = File(...), current_user: predUserModel = Depends(get_current_user)):
 
     """
     Allows you to make a prediction using Xception Model based on Image with a product image 
     """    
     # Ensure that the file is an image
-    if not file.content_type.startswith("image"):
+    if not image_file.content_type.startswith("image"):
         raise HTTPException(status_code=400, detail="File provided is not an image.")
 
-    content = await file.read()
+    content = await image_file.read()
     image = Image.open(BytesIO(content)).convert("RGB")
 
     # preprocess the image and prepare it for classification
@@ -120,8 +120,8 @@ async def predict_with_image_Xception(file: UploadFile = File(...), current_user
 
     # return the response as a JSON
     return {
-        "filename"        : file.filename,
-        "content_type"    : file.content_type,
+        "filename"        : image_file.filename,
+        "content_type"    : image_file.content_type,
         "predicted_class" : response['predicted_class'],
         "predicted_label" : response['predicted_label'],
         "precision"       : response['precision'],
@@ -130,16 +130,16 @@ async def predict_with_image_Xception(file: UploadFile = File(...), current_user
 
 # ============================================================================================================================================
 @predRouter.post("/predict_with_image_Inception",  name= 'Based on Image Only -  Inception', tags=['Predictions'], response_model=ImagePrediction)
-async def predict_with_image_Inception(file: UploadFile = File(...), current_user: predUserModel = Depends(get_current_user)):
+async def predict_with_image_Inception(image_file: UploadFile = File(...), current_user: predUserModel = Depends(get_current_user)):
     
     """
     Allows you to make a prediction using Inception Model based on Image with a product image 
     """       
     # Ensure that the file is an image
-    if not file.content_type.startswith("image"):
+    if not image_file.content_type.startswith("image"):
         raise HTTPException(status_code=400, detail="File provided is not an image.")
 
-    content = await file.read()
+    content = await image_file.read()
     image = Image.open(BytesIO(content)).convert("RGB")
 
     # preprocess the image and prepare it for classification
@@ -150,8 +150,8 @@ async def predict_with_image_Inception(file: UploadFile = File(...), current_use
 
     # return the response as a JSON
     return {
-        "filename"        : file.filename,
-        "content_type"    : file.content_type,
+        "filename"        : image_file.filename,
+        "content_type"    : image_file.content_type,
         "predicted_class" : response['predicted_class'],
         "predicted_label" : response['predicted_label'],
         "precision"       : response['precision'],
