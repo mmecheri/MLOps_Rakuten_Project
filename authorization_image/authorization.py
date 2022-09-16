@@ -5,10 +5,10 @@ import time
 
 
 #print('\n \n Please wait a while...')
-time.sleep(14)
+time.sleep(18)
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
-log_fname =  '/home/data/api_test.log'
+log_fname =  '/home/data/api_tests.log'
 
 # définition de l'adresse de l'API - Hostname
 api_address = 'fastApi_rakuten'

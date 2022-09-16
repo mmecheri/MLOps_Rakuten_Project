@@ -4,10 +4,10 @@ from datetime import datetime
 import time
 
 
-time.sleep(32)
+time.sleep(36)
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
-log_fname =  '/home/data/api_test.log' 
+log_fname =  '/home/data/api_tests.log' 
 
 
 # définition de l'adresse de l'API

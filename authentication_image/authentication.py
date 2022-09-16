@@ -5,11 +5,12 @@ import time
 
 
 #wait for the api to be launched
-#print('\n \n Wait until API is finished starting...')
-time.sleep(6)
-#print('\n \n starting completed')
+print('\n \n Wait until API is finished starting...')
+time.sleep(10)
+print('\n \n starting completed')
+
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
-log_fname =  '/home/data/api_test.log' 
+log_fname =  '/home/data/api_tests.log' 
 
 # définition de l'adresse de l'API - Hostname
 api_address = 'fastApi_rakuten'
