@@ -62,14 +62,10 @@ contact={
 
 module_name =  'app'
 
-    
-#-----------------------------------------------------------------------------------------------
-#                                              ROUTES 
-#-----------------------------------------------------------------------------------------------
-
+  
                                         
-  #                           authenticate                     
-  #-----------------------------------------------------------------------------------------------
+ #                           authenticate                     
+ #-----------------------------------------------------------------------------------------------
 
 @app.middleware("http")
 async def authenticate(request: Request, call_next):
@@ -92,8 +88,6 @@ async def authenticate(request: Request, call_next):
     response = await call_next(request)
     return response
 
-  #                           ROOT                     
-  #-----------------------------------------------------------------------------------------------
 
 
 @app.get("/",tags=['Default'])
@@ -103,7 +97,7 @@ async def root():
     """    
     return {"message": "Welcome to Rakuten API"}
 
-# ============================================================================================================================================
+
 @app.post("/token",tags=['Default'])
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
     """  
@@ -130,11 +124,8 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-# ============================================================================================================================================
-  #                          API Endpoints                     
-  #-----------------------------------------------------------------------------------------------
 
 app.include_router(adminRouter,tags=['Admin']) # Admin Routes
 app.include_router(usersRouter,tags=['Users']) # Users Routes
-app.include_router(predRouter,tags=['Predictions']) # DL Predictions Routes
+app.include_router(predRouter,tags=['Predictions']) # Predictions Routes
 
