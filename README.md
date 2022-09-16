@@ -48,11 +48,11 @@ Puis de lancer le fichier `setup.sh`: </br>
  *chmod +x setup.sh* </br>
  *./setup.sh* </br>
 
-
-L'API est ensuite disponible à l'adresse *[http://localhost:8000](http://localhost:8000")* 
+L'API est ensuite disponible à l'adresse http://localhost:8000
 
 La documentation est présente au point d'entrée '/docs'
 
+Les résulats de chaque test est imprimé à l'écran et enregistré dans un fichier nommé api_tests.log 
 
 
 **Réalisé par:** 
