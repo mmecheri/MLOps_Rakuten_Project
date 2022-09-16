@@ -81,7 +81,7 @@ actual restult = {status_code}
 # Response code status
 status_code = response_1.status_code
 
-# Setting test results
+# Setting test result
 if status_code == 204:
     test_status = 'SUCCESS'
     
@@ -154,7 +154,7 @@ actual restult = {status_code}
 # Response code status
 status_code = response_2.status_code
 
-# Setting test results
+# Setting test result
 if status_code == 403:
     test_status = 'SUCCESS'
 else:
