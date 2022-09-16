@@ -37,7 +37,9 @@ Pour utiliser ce repo, il suffit de le cloner:
 
 *cd Append_Engineer_Project*
 
-Puis de lancer le fichier `setup.sh`: *'./setup.sh*'
+Puis de lancer le fichier `setup.sh`: 
+chmod +x setup.sh
+*'./setup.sh*'
 
 
 L'API est ensuite disponible à l'adresse *[http://localhost:8000](http://localhost:8000")* 
