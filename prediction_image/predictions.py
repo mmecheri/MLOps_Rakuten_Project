@@ -4,7 +4,7 @@ from datetime import datetime
 import time
 
 
-time.sleep(36)
+time.sleep(30)
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 log_fname =  '/home/data/api_tests.log' 
