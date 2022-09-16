@@ -59,10 +59,7 @@ contact={
     "email": "md.mecheri@gmail.com"
         }
     )
-
-module_name =  'app'
-
-                                          
+                                      
 #authenticate                   
 @app.middleware("http")
 async def authenticate(request: Request, call_next):
