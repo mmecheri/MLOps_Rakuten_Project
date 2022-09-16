@@ -4,7 +4,7 @@ from datetime import datetime
 import time
 
 
-time.sleep(30)
+time.sleep(28)
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 log_fname =  '/home/data/api_tests.log' 
@@ -31,10 +31,11 @@ user_account = {'username':client_email_user,
                 'password': client_secret_user
                }
 
-
-token_request = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
+time.sleep(1)
+token_request = requests.post(url='http://{address}:{port}/token'.format(address=api_address,port=api_port), 
                                 headers=headers, 
                                 data=user_account)
+time.sleep(2)
 
 token = token_request.json()['access_token']
 #token
@@ -61,14 +62,11 @@ real_label_1 = 'toys for children'
 data_text_1 = {'designation': designation_text_1 ,
               'description': description_text_1 }
 
-
-response_1 = requests.post(url='http://{address}:{port}/predict_with_text_Conv1D/'.format(address=api_address,
-                                                                                          port=api_port)  , 
-                           headers=headers ,
-                           data = data_text_1
-                           
-                            )
-
+time.sleep(1)
+response_1 = requests.post(url='http://{address}:{port}/predict_with_text_Conv1D/'.format(address=api_address,port=api_port), 
+                           headers=headers,
+                           data=data_text_1)                         
+time.sleep(4)
 
 output_1 = '''
 ====================================================================
@@ -76,11 +74,10 @@ output_1 = '''
 ====================================================================
 
 request done at "predict_with_text_Conv1D"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product designation="{designation_text_1}"                
-| Rakuten product description="{description_text_1}"  
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product designation = '{designation_text_1}'                
+| Rakuten product description = '{description_text_1}'  
 
 
 expected result code = {status_code}
@@ -127,16 +124,16 @@ elif status_code != 200:
     score_status = 'FAILURE'
 
     
-output_1 =  output_1.format(designation_text_1 = designation_text_1,
-                            description_text_1 = description_text_1,
-                            real_class_1 = real_class_1,
-                            real_label_1 = real_label_1,
+output_1 =  output_1.format(designation_text_1=designation_text_1,
+                            description_text_1=description_text_1,
+                            real_class_1=real_class_1,
+                            real_label_1=real_label_1,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_1)
@@ -162,14 +159,11 @@ real_label_2 = 'children books and magazines'
 data_text_2 = {'designation': designation_text_2 ,
               'description': description_text_2 }
 
-
-response_2 = requests.post(url='http://{address}:{port}/predict_with_text_SimpleDN/'.format(address=api_address,
-                                                                                          port=api_port)  , 
+time.sleep(1)
+response_2 = requests.post(url='http://{address}:{port}/predict_with_text_SimpleDN/'.format(address=api_address,port=api_port), 
                            headers=headers ,
-                           data = data_text_2
-                           
-                            )
-
+                           data=data_text_2)                          
+time.sleep(4)
 
 
 output_2 = '''
@@ -178,21 +172,20 @@ output_2 = '''
 ====================================================================
 
 request done at "predict_with_text_SimpleDN"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product designation="{designation_text_2}"                
-| Rakuten product description="{description_text_2}"  
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product designation = '{designation_text_2}'               
+| Rakuten product description = '{description_text_2}'  
 
 
 expected result code = {status_code}
 expected Predicted class result =  {real_class_2}
-expected Predicted label result = "{real_label_2}"
+expected Predicted label result = '{real_label_2}'
 expected Precision  = 100
 
 actual result code = {status_code}
 actual Predicted class result = {predicted_class}
-actual Predicted label result = "{predicted_label}"
+actual Predicted label result = '{predicted_label}'
 actual Precision  = {precision}
 
 ==> Code result = {test_status}
@@ -229,16 +222,16 @@ elif status_code != 200:
     score_status = 'FAILURE'
 
     
-output_2 =  output_2.format(designation_text_2 = designation_text_2,
-                            description_text_2 = description_text_2,
-                            real_class_2 = real_class_2,
-                            real_label_2 = real_label_2,
+output_2 =  output_2.format(designation_text_2=designation_text_2,
+                            description_text_2=description_text_2,
+                            real_class_2=real_class_2,
+                            real_label_2=real_label_2,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_2)
@@ -275,13 +268,12 @@ real_label_3 = 'piscine spa'
 image_file = [('file', (image_name_1, open(image_name_1, 'rb'),
             'image/jpeg'))]
 
-response_3 = requests.post(url='http://{address}:{port}/predict_with_image_Xception/'.format(address=api_address,port=api_port) , 
+
+time.sleep(1)
+response_3 = requests.post(url='http://{address}:{port}/predict_with_image_Xception/'.format(address=api_address,port=api_port), 
                            headers=headers ,
                            files=image_file)
-                           
-                          
-
-
+time.sleep(4)                       
 
 
 output_3 = '''
@@ -290,21 +282,19 @@ output_3 = '''
 ====================================================================
 
 request done at "predict_with_image_Xception"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product image name= "{image_name_1}"                
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product image name = '{image_name_1}'                
   
-
 
 expected result code = {status_code}
 expected Predicted class result =  {real_class_3}
-expected Predicted label result ="{real_label_3}"
+expected Predicted label result = '{real_label_3}'
 expected Precision  = 100
 
 actual result code = {status_code}
 actual Predicted class result = {predicted_class}
-actual Predicted label result = "{predicted_label}"
+actual Predicted label result = '{predicted_label}'
 actual Precision  = {precision}
 
 ==> Code result = {test_status}
@@ -335,15 +325,15 @@ elif status_code != 200:
     #test_status = 'FAILURE'
     score_status = 'FAILURE'
 
-output_3 =  output_3.format(image_name_1 = image_name_1,                           
-                            real_class_3 = real_class_3,
-                            real_label_3 = real_label_3,
+output_3 =  output_3.format(image_name_1=image_name_1,                           
+                            real_class_3=real_class_3,
+                            real_label_3=real_label_3,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_3)
@@ -369,11 +359,12 @@ real_label_4 = 'playing cards'
 image_file = [('file', (image_name_2, open(image_name_2, 'rb'),
             'image/jpeg'))]
 
-response_4 = requests.post(url='http://{address}:{port}/predict_with_image_Inception/'.format(address=api_address,port=api_port) , 
+
+time.sleep(1)
+response_4 = requests.post(url='http://{address}:{port}/predict_with_image_Inception/'.format(address=api_address,port=api_port), 
                            headers=headers ,
                            files=image_file)
-                           
-                          
+time.sleep(4)                        
 
 print(image_file)
 
@@ -384,21 +375,19 @@ output_4 = '''
 ====================================================================
 
 request done at "predict_with_image_Inception"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product image name= "{image_name_2}"                
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product image name = '{image_name_2}'                
   
-
 
 expected result code = {status_code}
 expected Predicted class result =  {real_class_4}
-expected Predicted label result ="{real_label_4}"
+expected Predicted label result = '{real_label_4}'
 expected Precision  = 100
 
 actual result code = {status_code}
 actual Predicted class result = {predicted_class}
-actual Predicted label result = "{predicted_label}"
+actual Predicted label result = '{predicted_label}'
 actual Precision  = {precision}
 
 ==> Code result = {test_status}
@@ -429,15 +418,15 @@ elif status_code != 200:
     #test_status = 'FAILURE'
     score_status = 'FAILURE'
 
-output_4 =  output_4.format(image_name_2 = image_name_2,                           
-                            real_class_4 = real_class_4,
-                            real_label_4 = real_label_4,
+output_4 =  output_4.format(image_name_2=image_name_2,                           
+                            real_class_4=real_class_4,
+                            real_label_4=real_label_4,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_4)
@@ -485,34 +474,34 @@ image_file = [('image_file', (image_name_3, open(image_name_3, 'rb'),
 
 
 
-response_5 = requests.post(url='http://{address}:{port}/predict_with_text_and_image_Conv1D_SimpleDNN_Xception/'.format(address=api_address,port=api_port) , 
+time.sleep(1)
+response_5 = requests.post(url='http://{address}:{port}/predict_with_text_and_image_Conv1D_SimpleDNN_Xception/'.format(address=api_address,port=api_port), 
                            headers=headers ,
-                           data = data_text_3,
-                           files=image_file,
-                         )
+                           data=data_text_3,
+                           files=image_file)       
+time.sleep(3)
+
 output_5= '''
 =========================================================================================================
     Predictions test #5 using TEXT and IMAGE - BIMODAL : Conv1D & Simple DNN & Xception Results - results
 =========================================================================================================
 
 request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Xception"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product designation="{designation_text_3}"                
-| Rakuten product description="{description_text_3}"
-| Rakuten product image name="{image_name_3}"                
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product designation = '{designation_text_3}'                
+| Rakuten product description = '{description_text_3}'
+| Rakuten product image name = '{image_name_3}'                
   
-
 
 expected result code = {status_code}
 expected Predicted class result =  {real_class_5}
-expected Predicted label result ="{real_label_5}"
+expected Predicted label result = '{real_label_5}'
 expected Precision  = 100
 
 actual result code = {status_code}
 actual Predicted class result = {predicted_class}
-actual Predicted label result = "{predicted_label}"
+actual Predicted label result = '{predicted_label}'
 actual Precision  = {precision}
 
 ==> Code result = {test_status}
@@ -543,17 +532,17 @@ elif status_code != 200:
     #test_status = 'FAILURE'
     score_status = 'FAILURE'
 
-output_5 =  output_5.format(designation_text_3 = designation_text_3,                           
-                            description_text_3 = description_text_3,
-                            image_name_3 = image_name_3,
-                            real_class_5 = real_class_5,
-                            real_label_5 = real_label_5,
+output_5 =  output_5.format(designation_text_3=designation_text_3,                           
+                            description_text_3=description_text_3,
+                            image_name_3=image_name_3,
+                            real_class_5=real_class_5,
+                            real_label_5=real_label_5,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_5)
@@ -596,35 +585,35 @@ image_file = [('image_file', (image_name_4, open(image_name_4, 'rb'),
 
 
 
-response_6 = requests.post(url='http://{address}:{port}/predict_with_text_and_image_Conv1D_SimpleDNN_Inception/'.format(address=api_address,port=api_port) , 
+time.sleep(1)
+response_6 = requests.post(url='http://{address}:{port}/predict_with_text_and_image_Conv1D_SimpleDNN_Inception/'.format(address=api_address,port=api_port), 
                            headers=headers ,
-                           data = data_text_4,
-                           files=image_file,
-                         )
+                           data=data_text_4,
+                           files=image_file)
+time.sleep(3)
+
 output_6= '''
 ===================================================================================================
     Predictions test #6 using TEXT and IMAGE - BIMODAL : Conv1D & Simple DNN & Inception - results 
 ===================================================================================================
 
 request done at "predict_with_text_and_image_Conv1D_SimpleDNN_Inception"
-
-| username="johndoe@example.com"
-| password="secret2"
-| Rakuten product designation="{designation_text_4}"                
-| Rakuten product description="{description_text_4}"
-| Rakuten product image name="{image_name_4}"                
+| username = 'johndoe@example.com'
+| password = 'secret2'
+| Rakuten product designation = '{designation_text_4}'                
+| Rakuten product description = '{description_text_4}'
+| Rakuten product image name = '{image_name_4}'                
   
 
-
 expected result code = {status_code}
-expected Predicted class result =  {real_class_6}
-expected Predicted label result ="{real_label_6}"
+expected Predicted class result = {real_class_6}
+expected Predicted label result = '{real_label_6}'
 expected Precision  = 100
 
 actual result code = {status_code}
 actual Predicted class result = {predicted_class}
-actual Predicted label result = "{predicted_label}"
-actual Precision  = {precision}
+actual Predicted label result = '{predicted_label}'
+actual Precision={precision}
 
 ==> Code result = {test_status}
 ==> Prediction result = {prediction_status}
@@ -654,17 +643,17 @@ elif status_code != 200:
     #test_status = 'FAILURE'
     score_status = 'FAILURE'
 
-output_6 =  output_6.format(designation_text_4 = designation_text_4,                           
-                            description_text_4 = description_text_4,
-                            image_name_4 = image_name_4,
-                            real_class_6 = real_class_6,
-                            real_label_6 = real_label_6,
+output_6 =  output_6.format(designation_text_4=designation_text_4,                           
+                            description_text_4=description_text_4,
+                            image_name_4=image_name_4,
+                            real_class_6=real_class_6,
+                            real_label_6=real_label_6,
                             status_code=status_code,
                             test_status=test_status,
                             predicted_class=predicted_class,
                             predicted_label=predicted_label,
-                            precision = precision,
-                           prediction_status = prediction_status)
+                            precision=precision,
+                           prediction_status=prediction_status)
 
 
 print(output_6)

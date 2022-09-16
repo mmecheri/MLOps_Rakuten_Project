@@ -31,14 +31,14 @@ client_secret_user_1 = 'adminsecret1'
 
     
 data_user_1 = {'username':client_email_user_1,
-               'password': client_secret_user_1
+               'password':client_secret_user_1
               }
               
-time.sleep(2)             
+time.sleep(1)             
 response_1 = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
                                 headers=headers, 
                                 data=data_user_1)
-
+time.sleep(1)
 
 test_title =  '''
 **********************************************************************************************
@@ -57,8 +57,8 @@ output_1 = '''
 ==================================
 
 request done at "/token"
-| username: 'admin_account1@example.com'
-| password: 'adminsecret1'
+| username = 'admin_account1@example.com'
+| password = adminsecret1'
 
 expected result = 200
 actual restult = {status_code}
@@ -100,22 +100,23 @@ client_secret_user_2 = 'secret1'
 
     
 data_user_2 = {'username':client_email_user_2,
-               'password': client_secret_user_2
+               'password':client_secret_user_2
               }
               
-time.sleep(2)               
+time.sleep(1)               
 response_2 = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
                                 headers=headers, 
                                 data=data_user_2)
-
+time.sleep(1)
+  
 output_2 = '''
 ==================================
     Authentication test #2 results
 ==================================
 
 request done at "/token"
-| username='alicewonderson@example.com'
-| password='secret1'
+| username = 'alicewonderson@example.com'
+| password = 'secret1'
 
 expected result = 200
 actual restult = {status_code}
@@ -155,13 +156,14 @@ client_secret_user_3 = 'password'
 
     
 data_user_3 = {'username':client_email_user_3,
-               'password': client_secret_user_3
+               'password':client_secret_user_3
               }
               
-time.sleep(2)                
+time.sleep(1)                
 response_3 = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
                                 headers=headers, 
                                 data=data_user_3)
+time.sleep(1) 
 
 output_3 = '''
 ==================================
@@ -169,8 +171,8 @@ output_3 = '''
 ==================================
 
 request done at "/token"
-| username="johndoe@example.com"
-| password="password"
+| username = 'johndoe@example.com'
+| password = 'password'
 
 expected result = 401
 actual restult = {status_code}

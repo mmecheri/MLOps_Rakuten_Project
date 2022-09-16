@@ -27,12 +27,14 @@ client_email_admin_user = 'admin_account1@example.com'
 client_secret_admin_user = 'adminsecret1'
 
 admin_account = {'username':client_email_admin_user,
-                'password': client_secret_admin_user
+                'password':client_secret_admin_user
                }
 
+time.sleep(1)
 token_request_1 = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
                                 headers=headers, 
                                 data=admin_account)
+time.sleep(1)
 
 token_1 = token_request_1.json()['access_token']
 
@@ -42,13 +44,12 @@ headers['Authorization'] = 'Bearer ' + token_1
 
 account_to_delete = 'clementinemandarine@example.com'  
 
-time.sleep(2)
+time.sleep(1)
 response_1 = requests.delete(url='http://{address}:{port}/Admin/delete_user/'.format(address=api_address, port=api_port) + account_to_delete , 
-                                headers=headers                     
-                            )
+                                headers=headers)                   
+time.sleep(2)
 
 test_title =  '''
-
 
 **********************************************************************************************
 **********************************************************************************************
@@ -66,9 +67,9 @@ output_1 = '''
 ===========================================================================
 
 request done at "/Admin/delete_user/"
-| username: 'admin_account1@example.com'
-| password: 'adminsecret1'
-| user deletion test : email: 'clementinemandarine@example.com'
+| username = 'admin_account1@example.com'
+| password = 'adminsecret1'
+| user account deletion with email = 'clementinemandarine@example.com'
 
 
 expected result = 204
@@ -112,12 +113,14 @@ client_email_user = 'alicewonderson@example.com'
 client_secret_user = 'secret1'
 
 user_account = {'username':client_email_user,
-                'password': client_secret_user
+                'password':client_secret_user
                }
-
+               
+time.sleep(1)
 token_request_2 = requests.post(url='http://{address}:{port}/token'.format(address=api_address, port=api_port), 
                                 headers=headers, 
                                 data=user_account)
+time.sleep(1)
 
 token_2 = token_request_2.json()['access_token']
 token_2
@@ -127,10 +130,10 @@ headers['Authorization'] = 'Bearer ' + token_2
 
 account_to_delete = 'johndoe@example.com'  
 
-time.sleep(2)
+time.sleep(1)
 response_2 = requests.delete(url='http://{address}:{port}/Admin/delete_user/'.format(address=api_address, port=api_port) + account_to_delete , 
-                                headers=headers                     
-                            )
+                                headers=headers)                    
+time.sleep(2)
 
 # requête #2 START =========================================================================================
 output_2 = '''
@@ -138,9 +141,9 @@ output_2 = '''
     Authorization test #2 - user deletion test with user account- results
 ===========================================================================
 request done at "/Admin/delete_user/"
-| username: 'alicewonderson@example.com'
-| password: 'secret1'
-| user deletion test : email: 'johndoe@example.com'
+| username = 'alicewonderson@example.com'
+| password = 'secret1'
+| user account deletion with email = 'johndoe@example.com'
 
 
 expected result = 403
