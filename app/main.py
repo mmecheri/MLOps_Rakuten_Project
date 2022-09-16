@@ -88,7 +88,8 @@ async def authenticate(request: Request, call_next):
     response = await call_next(request)
     return response
 
-
+ #                           Default Routes                     
+ #-----------------------------------------------------------------------------------------------
 
 @app.get("/",tags=['Default'])
 async def root():
@@ -123,7 +124,8 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
     return {"access_token": access_token, "token_type": "bearer"}
 
-
+ #                           Include Admin , Users and Models predictions Routes                     
+ #-----------------------------------------------------------------------------------------------
 app.include_router(adminRouter,tags=['Admin']) # Admin Routes
 app.include_router(usersRouter,tags=['Users']) # Users Routes
 app.include_router(predRouter,tags=['Predictions']) # Predictions Routes
