@@ -93,10 +93,10 @@ actual Precision  = {precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_1.status_code
 
-# Request response
+# Request response data
 results_1 = response_1.json()
 #results_1
 
@@ -104,7 +104,7 @@ predicted_class = results_1["predicted_class"]
 predicted_label = results_1["predicted_label"]
 precision = results_1["precision"]
 
-# Code response results
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_1:    
@@ -181,10 +181,10 @@ actual Precision  = {precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_2.status_code
 
-# Request response
+# Request response data
 results_2 = response_2.json()
 #results_2
 
@@ -192,7 +192,7 @@ predicted_class = results_2["predicted_class"]
 predicted_label = results_2["predicted_label"]
 precision = results_2["precision"]
 
-# Code response result
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_2:    
@@ -278,10 +278,10 @@ actual Precision  = {precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_3.status_code
 
-# Request response
+# Request response data
 results_3 = response_3.json()
 #results_3
 
@@ -289,7 +289,7 @@ predicted_class = results_3["predicted_class"]
 predicted_label = results_3["predicted_label"]
 precision = results_3["precision"]
 
-# Code response result
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_3:    
@@ -367,10 +367,10 @@ actual Precision  = {precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_4.status_code
 
-# Request result
+# Request response data
 results_4 = response_4.json()
 #results_4
 
@@ -378,7 +378,7 @@ predicted_class = results_4["predicted_class"]
 predicted_label = results_4["predicted_label"]
 precision = results_4["precision"]
 
-# Code response result
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_4:    
@@ -468,10 +468,10 @@ actual Precision  = {precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_5.status_code
 
-# Request response
+# Request response data
 results_5 = response_5.json()
 #results_5
 
@@ -479,7 +479,7 @@ predicted_class = results_5["predicted_class"]
 predicted_label = results_5["predicted_label"]
 precision = results_5["precision"]
 
-# Code response result
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_5:    
@@ -569,10 +569,10 @@ actual Precision={precision}
 
 '''
 
-# Request status
+# Response code status
 status_code = response_6.status_code
 
-# Request response
+# Request response data
 results_6 = response_6.json()
 #results_6
 
@@ -580,7 +580,7 @@ predicted_class = results_6["predicted_class"]
 predicted_label = results_6["predicted_label"]
 precision = results_6["precision"]
 
-# Code response result
+# Setting test results
 if status_code == 200 :
     test_status = 'SUCCESS'
     if predicted_class == real_class_6:    

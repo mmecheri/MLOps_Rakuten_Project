@@ -4,17 +4,15 @@ from datetime import datetime
 import time
 
 
-#print('\n \n Please wait a while...')
 time.sleep(18)
 
 date_test = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 log_fname =  '/home/data/api_tests.log'
 
-# définition de l'adresse de l'API - Hostname
+# API IP
 api_address = 'fastApi_rakuten'
 
-
-# port de l'API
+# API port
 api_port = 8000
 
 headers = {
@@ -22,7 +20,7 @@ headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
 } 
 
-# requête #1 START =========================================================================================
+# Request #1 START =========================================================================================
 client_email_admin_user = 'admin_account1@example.com'
 client_secret_admin_user = 'adminsecret1'
 
@@ -80,10 +78,10 @@ actual restult = {status_code}
 '''
 
 
-# statut de la requête
+# Response code status
 status_code = response_1.status_code
 
-# affichage des résultats
+# Setting test results
 if status_code == 204:
     test_status = 'SUCCESS'
     
@@ -97,8 +95,7 @@ output_1 =  output_1.format(status_code=status_code, test_status=test_status)
 print(output_1)
 
 
-# impression dans un fichier
-
+# Print logs in a file
 if os.environ.get('LOG') == '1':
     with open(log_fname, 'a') as file:
         print("LOGs saved on",  log_fname)
@@ -108,7 +105,7 @@ else :
      print("An error occurred when tring to save LOGs!")
         
         
-# requête #1 END =========================================================================================
+# Request #1 END =========================================================================================
 client_email_user = 'alicewonderson@example.com'
 client_secret_user = 'secret1'
 
@@ -135,7 +132,7 @@ response_2 = requests.delete(url='http://{address}:{port}/Admin/delete_user/'.fo
                                 headers=headers)                    
 time.sleep(2)
 
-# requête #2 START =========================================================================================
+# Request #2 START =========================================================================================
 output_2 = '''
 ===========================================================================
     Authorization test #2 - user deletion test with user account- results
@@ -154,10 +151,10 @@ actual restult = {status_code}
 '''
 
 
-# statut de la requête
+# Response code status
 status_code = response_2.status_code
 
-# affichage des résultats
+# Setting test results
 if status_code == 403:
     test_status = 'SUCCESS'
 else:
@@ -174,7 +171,7 @@ test_end = '''
 **********************************************************************************************
 '''
 
-# impression dans un fichier
+# Print logs in a file
 if os.environ.get('LOG') == '1':
     with open(log_fname, 'a') as file:
         print("LOGs saved on",  log_fname)
@@ -184,4 +181,4 @@ else :
      print("An error occurred when tring to save LOGs!")
      
 print(test_end)
-# requête #2 END =========================================================================================
+# Request #2 END =========================================================================================
