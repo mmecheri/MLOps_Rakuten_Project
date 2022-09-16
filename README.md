@@ -43,6 +43,7 @@ Pour utiliser ce repo, il suffit de le cloner:
 *git clone https://github.com/mmecheri/Append_Engineer_Project.git*
 
 *cd Append_Engineer_Project* </br>
+Ensuite :
 *chmod +x setup.sh*  </br> 
 *./setup.sh* </br>
 
