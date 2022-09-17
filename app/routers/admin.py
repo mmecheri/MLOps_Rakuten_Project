@@ -9,7 +9,6 @@ from fastapi import (
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.security import OAuth2PasswordRequestForm
-
 from users.adminModels import (
     AdminCreateUserSchema, 
     AdminShowUserModel,
@@ -21,7 +20,6 @@ from dependecies.dependecies import (
     create_access_token,
     get_password_hash
 )
-
 from config.settings import ACCESS_TOKEN_EXPIRE_MINUTES
 from config.database import Users_db
 from pydantic import EmailStr, Required ,SecretStr
