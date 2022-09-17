@@ -4,7 +4,7 @@
  
 ### Contexte du projet
 
-Ce projet porte sur le dépoilement d’un projet de Machine Learning dans le cadre de ma formation de ML Engineer au sein de l’organisme DataScientest. 
+Ce projet porte sur le déploiement d’un projet de Machine Learning dans le cadre de ma formation de ML Engineer au sein de l’organisme DataScientest. 
 
 L’objectif étant de déployer en API et de conteneuriser un modèle de prédiction en Machine ou Deep Learning. 
 
@@ -27,7 +27,7 @@ Voici les modèles et les combinations que nous avons retenus:
 
      >- **Conv1D**, **Simple DNN** et **Xception**  
      >- **Conv1D**, **Simple DNN** et **InceptionV3**
-     >
+     
 La classification Bimodal permet d'obenir des performances supérieures à celles des modèles pris séparément.
 
 #### Etape du projet  :
@@ -49,7 +49,7 @@ L'API est ensuite disponible à l'adresse http://localhost:8000
 
 La documentation est présente au point d'entrée '/docs'
 
-Les résulats de chaque test est imprimé à l'écran et enregistré dans un fichier nommé api_tests.log 
+Les résulats des tests sont imprimés à l'écran et enregistrés dans un fichier nommé api_tests.log 
 
 
 **Réalisé par:** 
