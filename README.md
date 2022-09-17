@@ -30,7 +30,7 @@ Voici les modèles et les combinations que nous avons retenus:
      
 La classification Bimodal permet d'obenir des performances supérieures à celles des modèles pris séparément.
 
-#### Etape du projet  :
+#### Etapes du projet  :
 -	Reprendre les modèles de classification de produits e-commerce Rakuten France et les déployer sur une API :  créer des Endpoints pour réaliser des prédictions
 -	Créer une base de données en Backend pour l’API avec la gestion et l'authentification des utilisateurs 
 -	Conteneuriser avec Docker et Docker-compose
