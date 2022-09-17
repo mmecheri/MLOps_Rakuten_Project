@@ -26,21 +26,15 @@ from predictions.dlModels import (
     predict_conv1D_simpleDNN_inception)
 
 from datetime import datetime, timedelta
-
 from dependecies.dependecies import (
     get_current_user,
 )
-
 from users.predModel import (
   TextPrediction,
   ImagePrediction,
   MultiModalPrediction,
   predUserModel
-
 )
-
-
-
 from config.settings import ACCESS_TOKEN_EXPIRE_MINUTES
 from config.database import db
 
