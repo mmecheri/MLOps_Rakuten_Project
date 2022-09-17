@@ -10,7 +10,7 @@ L’objectif étant de déployer en API et de conteneuriser un modèle de prédi
 
 Dans ce projet , je reprends mon projet de modélisation fil rouge : Rakuten France Multimodal Product Data Classification réalisé au cours de ma précédente formation de Data Scientist au sein du même organisme de formation. 
 
-##### Solution retenue lors de l'étape de modélisation
+#### Solution retenue lors de l'étape de modélisation
 
 Dans un contexte de classification des produits « e-commerce », était de prédire le code type (**prdtypecode**) de chaque produit en utilisant des données **textuelles** (désignation et description du produit) ainsi que des données **images** (image du produit) tel qu'il est défini dans le catalogue de Rakuten France.
 
