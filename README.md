@@ -49,7 +49,7 @@ L'API est ensuite disponible à l'adresse http://localhost:8000
 
 La documentation est présente au point d'entrée '/docs'
 
-Les résulats des tests sont imprimés à l'écran et enregistrés dans un fichier nommé api_tests.log 
+Les résulats des tests sont imprimés et enregistrés dans un fichier nommé api_tests.log 
 
 
 **Réalisé par:** 
