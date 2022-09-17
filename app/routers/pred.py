@@ -48,10 +48,6 @@ from config.database import db
 predRouter = APIRouter()
 
 
-
-
-
-
 # ============= ROUTES=============================================================================================================
 @predRouter.post("/predict_with_text_Conv1D",  name= 'Based on Text Only - Conv1D', tags=['Predictions'], response_model=TextPrediction)
 async def predict_with_text_Conv1D(designation: str = Form(), description: Optional[str] = Form(None),
