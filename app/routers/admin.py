@@ -79,7 +79,7 @@ async def add_user(user: AdminCreateUserSchema,current_user: AdminCreateUserSche
 
         raise HTTPException(status_code=status.HTTP_409_CONFLICT,detail='There already exists a user account with this email address')
 
-    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access his resource") 
+    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access this resource") 
 
 # ============================================================================================================================================
 @adminRouter.get("/Admin/current", response_description="Current User", response_model=AdminShowUserModel)
@@ -89,7 +89,7 @@ async def current_user(current_user: AdminShowUserModel = Depends(get_current_us
     """
     if not current_user["role"] != "admin":
      return current_user
-    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access his resource")
+    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access this resource")
 
 
 
@@ -125,7 +125,7 @@ async def list_users(nbr_of_users:int = Query(default=100 , alias="Number of use
             
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Please enter a valid number of users')
 
-   raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access his resource")
+   raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access this resource")
 
 
 @adminRouter.put("/Admin/update_user/{user_email}", response_description="Update a user")
@@ -167,7 +167,7 @@ async def update_user(user_email: EmailStr, user: AdminUpdateUserModel, current_
 
         raise HTTPException(status_code=404, detail=f"User {user_email} not found")
 
-    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access his resource")
+    raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access this resource")
 
 
 
@@ -187,5 +187,5 @@ async def delete_user(user_email: EmailStr, current_user: AdminCreateUserSchema 
         raise HTTPException(status_code=404, detail=f"User: {user_email} not found")
     
     else:
-        raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access his resource")
+        raise HTTPException(status_code=403, detail=f"Not having sufficient rights to access this resource")
 # ============================================================================================================================================
